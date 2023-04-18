@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+
+.secction-presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    .img-dragon {
+        figure{
+            img{
+                width: 20rem;    
+                height: 20rem;
+                border: solid 0.2rem black;
+            }
+        }
+    }
+}
+
+.secction-armado {
+    .fondo-armado {
+        border: solid 0.5rem black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        // min-width: 35rem;
+        // min-height:45rem ;
+
+        div {
+            width: 94px;
+            height: 94px;
+            border: solid 0.2rem red;
+        }
+    }
+}
