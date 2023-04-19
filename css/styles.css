@@ -1,33 +1,51 @@
 * {
   margin: 0;
-  padding: 0; }
-
-body {
-  background-image: url("../img/fondo.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  padding: 0;
+  background-color: cadetblue; }
 
 .secction-presentacion {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white; }
+  text-align: center; }
   .secction-presentacion .img-dragon figure img {
     width: 20rem;
     height: 20rem;
-    border: solid 0.2rem black; }
+    border: solid 0.2rem black;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem #000; }
 
 .secction-armado .fondo-armado {
-  border: solid 0.5rem black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem; }
+  background-color: white;
+  padding: 1rem;
+  border: solid 0.2rem black;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem #000;
+  display: grid;
+  grid-template-columns: repeat(4, 140px);
+  grid-template-rows: repeat(4, 140px);
+  gap: 0.3rem;
+  justify-content: center; }
   .secction-armado .fondo-armado div {
-    width: 94px;
-    height: 94px;
-    border: solid 0.2rem red; }
+    border: solid 0.10rem black;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #000; }
+
+.secction-fragmento .img-fragmentadas figure {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 140px);
+  grid-template-rows: repeat(4, 140px);
+  gap: 0.3rem;
+  justify-content: center;
+  border: solid 0.2rem black;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem #000;
+  background-color: white; }
+  .secction-fragmento .img-fragmentadas figure img {
+    cursor: pointer;
+    border-radius: 0.4rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #000; }
 
 /*# sourceMappingURL=styles.css.map */
