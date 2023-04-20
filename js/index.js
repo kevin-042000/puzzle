@@ -1,6 +1,8 @@
 const img = document.querySelectorAll(".imagen")
 const contenedor_receptor = document.querySelectorAll(".cont")
 const contenedor_inicial = document.querySelectorAll(".contenedor-img-inicial")
+const resetButton = document.getElementById("reset-button");
+
 
 img.forEach(imagen =>{
 
@@ -58,3 +60,18 @@ contenedor_inicial.forEach(inicial => {
     })
     
 })
+
+resetButton.addEventListener("click", () => {
+    const contenedorReceptores = document.querySelectorAll(".cont");
+    const contenedorIniciales = document.querySelectorAll(".contenedor-img-inicial");
+  
+    contenedorReceptores.forEach((receptor) => {
+      const imagen = receptor.querySelector(".imagen");
+      if (imagen) {
+        const id = imagen.id;
+        const nodoInicial = document.getElementById("inicial-" + id);
+        receptor.removeChild(imagen);
+        receptor.appendChild(nodoInicial);
+      }
+    });
+  });

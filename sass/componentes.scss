@@ -1,0 +1,23 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    
+    button {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 10px;
+        background-color: cornflowerblue;
+        color: white;
+    }
+
+    button:hover{
+        transform: translateY(-5px);
+        box-shadow: 2px 2px 5px #888888;
+        background-color: cadetblue;
+        transition: all 0.4s;
+    }
+  }
+
