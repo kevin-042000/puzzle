@@ -68,6 +68,15 @@
             box-shadow: 0.3rem 0.3rem 0.3rem #000;
             background-color: white;
 
+            .contenedor-img-inicial{
+                border: solid 0.10rem black;
+                cursor: pointer;
+                border-radius: 0.4rem;
+                box-shadow: 0.2rem 0.2rem 0.2rem #000;
+            }
+
+            }
+
             img {
                 cursor: pointer;
                 border-radius: 0.4rem;
@@ -75,4 +84,3 @@
             }
         }
     }
-}

@@ -1,83 +1,60 @@
+const img = document.querySelectorAll(".imagen")
+const contenedor_receptor = document.querySelectorAll(".cont")
+const contenedor_inicial = document.querySelectorAll(".contenedor-img-inicial")
+
+img.forEach(imagen =>{
+
+    imagen.addEventListener("dragstart", Event => {
+        console.log("arrastrando" )
+        Event.dataTransfer.setData("id", imagen.id)
+    })
+
+    imagen.addEventListener("dragend", ()=> {
+        console.log("fin de arrastre")
+    })
+})
+
+contenedor_receptor.forEach(receptor => {
+
+    receptor.addEventListener("dragover", Event => {
+        Event.preventDefault()
+         const tieneImagen = receptor.querySelector(".imagen")
+        if (!tieneImagen) {
+            Event.dataTransfer.dropEffect = "move"
+        } else {
+            Event.dataTransfer.dropEffect = "none"
+        }
+    })
+
+    receptor.addEventListener("drop", Event => {
+        Event.preventDefault()
+        const id_img = Event.dataTransfer.getData("id")
+        const nodo = document.getElementById(id_img)
+        receptor.appendChild(nodo)
+
+    })
+})
 
 
+contenedor_inicial.forEach(inicial => {
+
+    inicial.addEventListener("dragover", Event => {
+        Event.preventDefault()
+        const tieneImagen = inicial.querySelector(".imagen")
+        if (!tieneImagen) {
+            Event.dataTransfer.dropEffect = "move"
+        } else {
+            Event.dataTransfer.dropEffect = "none"
+        }
+    })
 
 
+    inicial.addEventListener("drop", Event => {
+        Event.preventDefault()
+        const id_img = Event.dataTransfer.getData("id")
+        const nodo_inicio = document.getElementById(id_img)
+        inicial.appendChild(nodo_inicio)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const parrafos = document.querySelectorAll(".parrafo")
-// const secciones = document.querySelectorAll(".seccion")
-// const papelera = document.querySelector(".cont_papelera")
-
-// parrafos.forEach(parrafo => {
-//     parrafo.addEventListener("dragstart", event => {
-//         console.log("Estoy arrastrando el parrafo: " + parrafo.innerText)
-//         parrafo.classList.add("dragging")
-//         event.dataTransfer.setData("id", parrafo.id)
-//     })
-
-
-//     parrafo.addEventListener("dragend", ()=> {
-//         // console.log("He terminado de arrastrar")
-//         parrafo.classList.remove("dragging")
-//     })
-// });
-
-// secciones.forEach(seccion => {
-//     seccion.addEventListener("dragover", event => {
-//         event.preventDefault()
-//         event.dataTransfer.dropEffect = "move"
-//         // console.log("Drag Over")
-//     })
-
-//     seccion.addEventListener("drop", event => {
-//         event.preventDefault()
-//         console.log("drop")
-//         const id_parrafo = event.dataTransfer.getData("id")
-//         const parrafo = document.getElementById(id_parrafo)
-        
-//         seccion.appendChild(parrafo)
-//     })
-// })
-
-// papelera.addEventListener("dragover", event => {
-//     event.preventDefault();
-//     event.dataTransfer.dropEffect = "move";
-// })
-
-// papelera.addEventListener("drop", event => {
-//     event.preventDefault()
-//     const id_parrafo = event.dataTransfer.getData("id")
-//     const parrafo = document.getElementById(id_parrafo)
-//     parrafo.parentNode.removeChild(parrafo)
-// })
+    })
+    
+})
