@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
-    // background-color: cadetblue;
+    font-family: 'Merriweather', serif;
 }
 
 body {
@@ -13,6 +16,7 @@ body {
 
 
 .secction-presentacion {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,3 +116,7 @@ body {
         }
     }
 
+footer {
+    background-color: grey;
+    color: white;
+}

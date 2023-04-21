@@ -62,16 +62,5 @@ contenedor_inicial.forEach(inicial => {
 })
 
 resetButton.addEventListener("click", () => {
-    const contenedorReceptores = document.querySelectorAll(".cont");
-    const contenedorIniciales = document.querySelectorAll(".contenedor-img-inicial");
-  
-    contenedorReceptores.forEach((receptor) => {
-      const imagen = receptor.querySelector(".imagen");
-      if (imagen) {
-        const id = imagen.id;
-        const nodoInicial = document.getElementById("inicial-" + id);
-        receptor.removeChild(imagen);
-        receptor.appendChild(nodoInicial);
-      }
-    });
-  });
+    window.location.reload();
+});
