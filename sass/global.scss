@@ -117,6 +117,43 @@ body {
     }
 
 footer {
-    background-color: grey;
+    background-color: black;
     color: white;
+    margin-top: 2rem;
+
+    .cont-p {
+    text-align: center;
+    p{
+        padding: 1rem 0 0 0.5rem;
+    }
+
+    }
+
+
+    .row { 
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: space-around; 
+
+                a, i {
+                  margin: 0 0.2rem;
+                  text-decoration: none;
+                  margin-bottom: 1rem;
+                  color: #0075ff;  
+                  transition: all 0.3s ease;  
+                  
+                
+                }
+    
+        }
+        a:hover {
+            color: #00FF7F ;
+            transform: translateY(-5px);
+        }
+        a:hover i{
+            color: #00FF7F ;
+        }
+
+    }
 }
