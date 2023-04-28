@@ -21,4 +21,21 @@
     }
   }
 
+  @media (max-width: 576px){
+
+    .btn {        
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 10px;
+            background-color: cornflowerblue;
+            color: white;
+          
+            font-size: 0.6rem;
+        }
+        }
+    
+
+  }
+
 
