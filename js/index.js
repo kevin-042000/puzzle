@@ -64,3 +64,24 @@ contenedor_inicial.forEach(inicial => {
 resetButton.addEventListener("click", () => {
     window.location.reload();
 });
+
+
+// Codigo para celular
+img.forEach(imagen => {
+    imagen.addEventListener("touchstart", event => {
+        event.preventDefault();
+        console.log("tocando");
+        event.target.classList.add("active");
+    });
+
+    imagen.addEventListener("touchend", event => {
+        event.preventDefault();
+        console.log("fin de toque");
+        event.target.classList.remove("active");
+
+        const receptor = document.elementFromPoint(event.changedTouches[0].clientX, event.changedTouches[0].clientY).closest(".cont");
+        if (receptor) {
+            receptor.appendChild(event.target);
+        }
+    });
+});
